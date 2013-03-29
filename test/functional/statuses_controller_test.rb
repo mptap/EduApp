@@ -11,6 +11,12 @@ class StatusesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:statuses)
   end
 
+   test "should get new" do
+    get :new
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
+
   test "should be redirected when not logged in" do
     get :new
     assert_response :redirect
@@ -34,7 +40,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should update status" do
-    put :update, id: @status, status: { content: @status.content }
+    put :update, id: @status, status: { content: @status.content}
     assert_redirected_to status_path(assigns(:status))
   end
 
