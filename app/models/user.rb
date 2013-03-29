@@ -11,11 +11,8 @@ class User < ActiveRecord::Base
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :profile_name, presence: true, uniqueness: true,
-                           format: {
-                             with: /a-zA-Z0-9_-/,
-                             message: 'Must have a valid format'
-                                  }
+  validates :profile_name, presence: true, uniqueness: true
+  validates_format_of :profile_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
 
 
 
