@@ -4,3 +4,9 @@ profil:
   email: "profile@gmail.com"
   profile_name: 'profile'
   
+charu:
+  first_name: "Charu"
+  last_name: "DEF"
+  email: "charuv@gmail.com"
+  profile_name: 'charuv'
+  
