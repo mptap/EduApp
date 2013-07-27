@@ -1,0 +1,39 @@
+<h1>Hello, World!</h1>
+
+Java is an object oriented language (OOP). Objects in Java are called "classes".
+
+Let's go over the Hello world program, which simply prints "Hello, World!" to the screen.
+<pre>
+public class Main {
+public static void main(String[] args) {
+System.out.println("Hello, World!");
+}
+}
+</pre>
+The first line defines a class called <code>Main.</code>
+
+<pre>public class Main {</pre>
+In Java, every line of code that can actually run needs to be inside a class. This line declares a class named <code>Main</code>, which is <code>public</code>, that means that any other class can access it. This is not important for now, so don't worry. For now, we'll just write our code in a class called Main, and talk about objects later on.
+
+Notice that when we declare a public class, we must declare it inside a file with the same name (Main.java), otherwise we'll get an error when compiling.
+
+When running the examples on the site, we will not use the public keyword, since we write all our code in one file.
+
+The next line is:
+
+<pre>public static void main(String[] args) {</pre>
+This is the entry point of our Java program. the main method has to have this exact signature in order to be able to run our program.
+
+<code>public</code> again means that anyone can access it.
+<code>static</code> means that you can run this method without creating an instance of Main.
+<code>void</code> means that this method doesn't return any value.
+<code>main</code> is the name of the method.
+The arguments we get inside the method are the arguments that we will get when running the program with parameters. It's an array of strings. We will use it in our next lesson, so don't worry if you don't understand it all now.
+
+<pre>System.out.println("Hello, World!");</pre>
+<code>System</code> is a pre-defined class that Java provides us and it holds some useful methods and variables.
+<code>out</code> is a static variable within System that represents the output of your program (stdout).
+<code>println</code> is a method of out that can be used to print a line.<br>
+
+
+<p><h3><%= link_to 'Back', statuses_path %>       </h3> </p>

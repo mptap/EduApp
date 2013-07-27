@@ -1,25 +1,18 @@
 <div class="page-header">
-<h1> All Statuses </h1>
+<h1> Course Catalogue </h1>
+<h4> A platform for beginners to get started with programming</h4>
 </div>
-<%= link_to "Post a new status", new_status_path, class: "btn btn-success" %>
+<body>
+Welcome to the LearnJavaOnline.org Interactive Java Tutorial.
 
-<% @statuses.each do |status| %>
-<div class="status">
-  <div class="row">
-      <div class="span1">
-        <%= image_tag status.user.gravatar_url %>
-      </div>
-      <div class="span7">
-      <strong><%=status.user.full_name %> </strong>
-      <p> <%= status.content %> </p>
-      <div class="meta">
-      <%= link_to time_ago_in_words(status.created_at) + "  ago |", status %>
-      <span class="admin">
-      <%= link_to "Edit", edit_status_path(status) %> |
-      <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you wanna delete"} %>
-      </span>
-      </div>
-    </div>
-  </div>
-  </div>
-  <% end %>
+Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Java programming language.
+
+Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
+
+Follow the link below !
+</body>
+
+
+
+<%= render 'list' %>
+

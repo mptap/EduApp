@@ -11,6 +11,16 @@ Minifb::Application.routes.draw do
 
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
+  get 'hello', to: 'statuses#hello', as: :hello
+  get 'var', to: 'statuses#var', as: :var
+  get 'arr', to: 'statuses#arr', as: :arr
+  get 'func', to: 'statuses#func', as: :func
+  get 'oandc', to: 'statuses#oandc', as: :oandc
+  get 'compile', to: 'statuses#compile', as: :compile
+  get 'quiz', to: 'statuses#quiz', as: :quiz
+  get 'dis', to: 'statuses#dis', as: :dis
+
+
   root :to => 'statuses#index'
 
   get '/:id', to: 'profiles#show'

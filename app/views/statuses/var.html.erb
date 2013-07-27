@@ -1,0 +1,79 @@
+<h1>Variables and Types</h1>
+Although Java is object oriented, not all types are objects. It is built on top of basic variable types called primitives.
+<p>
+Here is a list of all primitives in Java:</p>
+<ul>
+<li>byte (number, 1 byte)</li>
+<li>short (number, 2 bytes)</li>
+<li>int (number, 4 bytes)</li>
+<li>long (number, 8 bytes)</li>
+<li>float (float number, 4 bytes)</li>
+<li>double (float number, 8 bytes)</li>
+<li>char (a character, 2 bytes)</li>
+<li>boolean (true or false, 1 byte)</li>
+</ul>
+Java is a strong typed language, which means variables need to be defined before we use them.
+<h4>
+Numbers</h4>
+To declare and assign a number use the following syntax:
+<pre>
+int myNumber;
+myNumber = 5;
+</pre>
+Or you can combine them:
+<pre>
+int myNumber = 5;
+</pre>
+To define a floating point number, use the following syntax:
+<pre>
+double d = 4.5;
+d = 3;
+</pre>
+If you want to use float, you will have to cast:
+
+<pre>float f = (float) 4.5;</pre>
+<h4>Characters and Strings</h4>
+In Java, a character is it's own type and it's not simply a number, so it's not common to put an ascii value in it, there is a special syntax for chars:
+
+<pre>char c = 'g';</pre>
+String is not a primitive. It's a real type, but Java has special treatment for String.
+
+Here are some ways to use a string:
+<pre>
+// Create a string with a constructor
+String s1 = new String("Who let the dogs out?");
+// Just using "" creates a string, so no need to write it the previous way.
+String s2 = "Who who who who!";
+// Java defined the operator + on strings
+String s3 = s1 + s2;
+</pre>
+There is no operator overloading in Java! The operator + is only defined for strings, you will never see it with other objects, only primitives.
+
+You can also concat string to primitives:
+<pre>
+int num = 5;
+String s = "I have " + num + " cookies";
+</pre>
+<h4>boolean</h4>
+Every comparison operator in java will return the type boolean that not like other languages can only accept two special values: true or false.
+<pre>
+boolean b = false;
+b = true;
+
+boolean toBe = false;
+b = toBe || !toBe;
+if (b) {
+System.out.println(toBe);
+}
+
+int children = 0;
+b = children; // Will not work
+if (children) { // Will not work
+// Will not work
+}
+</pre>
+<br>
+
+<br>
+
+<p><h3><%= link_to 'Back', statuses_path %>       </h3> </p>

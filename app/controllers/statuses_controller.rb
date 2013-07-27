@@ -2,7 +2,9 @@ class StatusesController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
   # GET /statuses
   # GET /statuses.json
+
   def index
+
     @statuses = Status.all
 
     respond_to do |format|
@@ -69,6 +71,8 @@ class StatusesController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /statuses/1
   # DELETE /statuses/1.json
